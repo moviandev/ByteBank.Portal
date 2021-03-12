@@ -1,12 +1,15 @@
-﻿using System;
+﻿using ByteBank.Portal.infra;
+using System;
 
 namespace ByteBankPortal
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var prefixes = new string[] { "http://localhost:5341/" };
+            var webApp = new WebApp(prefixes);
+            webApp.Start();
         }
     }
 }
